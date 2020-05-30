@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 const items = require('./routes/api/items');
 
 
-
 const app = express();  //We initialize our app like with Flask app=flask()
 
 //BodyParser Middleware

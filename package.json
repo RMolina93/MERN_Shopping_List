@@ -3,19 +3,26 @@
   "version": "1.0.0",
   "description": "Shopping list built with the MERN stack",
   "main": "server.js",
+
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run client\"  \"npm run server\""
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RMolina93/MERN_Shopping_List.git"
   },
+
   "author": "Ruben Molina",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/RMolina93/MERN_Shopping_List/issues"
   },
+
   "homepage": "https://github.com/RMolina93/MERN_Shopping_List#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -23,6 +30,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.16"
   },
+
   "devDependencies": {
     "nodemon": "^2.0.4"
   }
